@@ -8,7 +8,7 @@ import {Message} from '../message';
 })
 export class MessageComponent implements OnInit {
   message:Message = {
-    message:"Dag allemaal, hoe gaat het met jullie? Lange tijf al niet gezien. Hopelijk is het vaccin er snel en kunnen we elkaar weer in levende lijve zien.",
+    message:"Dag allemaal, hoe gaat het met jullie? Lange tijd al niet gezien. Hopelijk is het vaccin er snel en kunnen we elkaar weer in levende lijve zien.",
     newMessage:"",
     allMessages:[],
   }
