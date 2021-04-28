@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+<div [className]="'divStyle'">
+    <h2>{{boxTitle}}</h2>
+    <div [ngClass]="{'green': clicked, 'pink':!clicked}" >{{reclame.message1}}</div>
+    <div [ngClass]="{'purple': clicked, 'blue':!clicked}">{{reclame.message2}}</div>
+    <div [ngClass]="{'blue': clicked, 'yellow':!clicked}">{{reclame.message3}}</div>
+    <button (click)="OnClicked()">Change colors!</button>
+</div>
