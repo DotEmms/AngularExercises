@@ -1,8 +1,8 @@
 <h1>{{title}}</h1>
 <div [className]="'divStyle'">
     <h2>{{boxTitle | uppercase}}</h2>
-    <div [ngClass]="{'green': clicked, 'pink':!clicked}" >{{reclame.message1 | charCapPipe}}</div>
-    <div [ngClass]="{'purple': clicked, 'blue':!clicked}">{{reclame.message2 | charCapPipe}}</div>
-    <div [ngClass]="{'blue': clicked, 'yellow':!clicked}">{{reclame.message3 | charCapPipe}}</div>
+    <div [ngClass]="{'green': clicked, 'pink':!clicked}" >{{reclame.message1 | titlecase | charCapPipe}}</div>
+    <div [ngClass]="{'purple': clicked, 'blue':!clicked}">{{reclame.message2 | titlecase | charCapPipe}}</div>
+    <div [ngClass]="{'blue': clicked, 'yellow':!clicked}">{{reclame.message3 | titlecase | charCapPipe}}</div>
     <button (click)="OnClicked()">Change colors!</button>
 </div>
