@@ -14,11 +14,17 @@ export class MessageComponent implements OnInit {
   }
   title = "Message";
   boxTitle = "Messages";
-  
+  selectedMessage?:string;
 
    AddMessage(){
      this.message.allMessages.push(this.message.newMessage)
      this.message.newMessage ="";
+   }
+
+   ShowFullMessage(selected?: string): void{
+     console.log("message clicked");
+     console.log(this.message);
+     this.selectedMessage = selected;
    }
   constructor() { }
 
