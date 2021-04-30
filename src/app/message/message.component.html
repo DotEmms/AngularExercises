@@ -6,13 +6,16 @@
 <div [className]="'divStyle'" >
     <h2>{{boxTitle}}</h2>
     <ul >
+        <li *ngFor="let mockMessage of messages" (click)="ShowFullMessage(mockMessage.message)">
+            <span>{{mockMessage.message | charCapPipe}}</span>
+        </li>
         <li *ngFor="let message of allMessages" style="text-align: left;" 
         (click)="ShowFullMessage(message)">
             <span>{{message | titlecase | charCapPipe}}</span>
         </li>
     </ul>
     <input placeholder="add a message" [(ngModel)]="message.newMessage"/>
-    <button (click)="AddMessage()">click me!</button>
+    <button (click)="AddMessage()">Add message!</button>
     <app-message-detail [fullMessage]="selectedMessage"></app-message-detail>
 </div>
 

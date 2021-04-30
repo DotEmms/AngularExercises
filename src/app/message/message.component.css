@@ -1,7 +1,7 @@
 .divStyle{
  border-style: solid;
  border-width: 1px; 
- background-color: red; 
+ background-color: darkcyan; 
  width: 300px; 
  margin: 50px;
  padding: 10px;
@@ -11,5 +11,11 @@
 }
 .divStyle ul li{
    list-style-type: none;
-   
+   border-style: solid;
+   border-width: 1px;
+   background-color: darkolivegreen;
+}
+.divStyle ul li:hover{
+    background-color: darkturquoise;
+
 }
