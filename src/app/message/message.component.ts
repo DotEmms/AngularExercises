@@ -32,7 +32,7 @@ export class MessageComponent implements OnInit {
       id:this.message.id,
       message:this.newMessageContent,
       newMessage:""
-    }
+    };
     this.MessageService.addMessage(newerMessage);
     this.newMessageContent ="";
     this.message.id++;
