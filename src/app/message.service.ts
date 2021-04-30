@@ -14,4 +14,7 @@ export class MessageService {
     const messages = of(MESSAGES);
     return messages;
   }
+  addMessage(newMessage:Message):void{
+    MESSAGES.push(newMessage);
+  }
 }

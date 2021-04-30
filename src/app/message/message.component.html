@@ -4,13 +4,12 @@
     <p>{{message.message | titlecase}}</p>
 </div>
 <div [className]="'divStyle'" >
-    <h2>{{boxTitle}}</h2>
+    <h2>{{boxTitle}} with piping/detail page</h2>
     <ul >
         <li *ngFor="let mockMessage of messages" (click)="ShowFullMessage(mockMessage.message)">
             <span>{{mockMessage.message | charCapPipe}}</span>
         </li>
-        <li *ngFor="let message of allMessages" style="text-align: left;" 
-        (click)="ShowFullMessage(message)">
+        <li *ngFor="let message of allMessages" (click)="ShowFullMessage(message)">
             <span>{{message | titlecase | charCapPipe}}</span>
         </li>
     </ul>
@@ -23,7 +22,9 @@
     <h2>Messages with service</h2>
     <ul>
         <li *ngFor="let mockMessage of messages" >
-            <span>{{mockMessage.message}}</span>
+            <span>Database Message {{mockMessage.id}}: {{mockMessage.message}}</span>
         </li>
     </ul>
+    <input placeholder="add a message" [(ngModel)]="newMessageContent"/>
+    <button (click)="AddServiceMessage()">Add message!</button>
 </div>

@@ -9,6 +9,7 @@ import {MessageService} from '../message.service';
 })
 export class MessageComponent implements OnInit {
   message:Message = {
+    id: 6,
     message:"Dag allemaal, hoe gaat het met jullie? Lange tijd al niet gezien. Hopelijk is het vaccin er snel en kunnen we elkaar weer in levende lijve zien.",
     newMessage:"",
   }
@@ -16,7 +17,7 @@ export class MessageComponent implements OnInit {
   boxTitle = "Messages";
   allMessages:string[] = [];
   selectedMessage?:string;
-
+  newMessageContent:string = "";
   messages: Message[] = [];
    
   constructor(private MessageService: MessageService) { }
@@ -26,6 +27,16 @@ export class MessageComponent implements OnInit {
     this.message.newMessage ="";
   }
 
+  AddServiceMessage(){
+    let newerMessage:Message = {
+      id:this.message.id,
+      message:this.newMessageContent,
+      newMessage:""
+    }
+    this.MessageService.addMessage(newerMessage);
+    this.newMessageContent ="";
+    this.message.id++;
+  }
   ShowFullMessage(selected?: string): void{
     console.log("message clicked");
     console.log(this.message);
